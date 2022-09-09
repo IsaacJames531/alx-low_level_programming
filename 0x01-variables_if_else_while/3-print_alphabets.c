@@ -1,32 +1,25 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - Prints a text according number
+ * main - Prints the alphabetic in lower and upper case
  *
  * Return: Always (Success)
  */
 int main(void)
 {
-	int n, lastd;
+	char c;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	lastd = n % 10;
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		putchar(c);
+	}
 
-	if (lastd > 5)
+	for (c = 'A'; c <= 'Z'; c++)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, lastd);
+		putchar(c);
 	}
-	else if (lastd == 0)
-	{
-		printf("Last digit of %d is %d and is 0\n", n, lastd);
-	}
-	else if (lastd < 6 && lastd != 0)
-	{
-		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lastd);
-	}
+
+	putchar('\n');
 
 	return (0);
 }
