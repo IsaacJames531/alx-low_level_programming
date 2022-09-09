@@ -1,17 +1,20 @@
 #include <stdio.h>
 
 /**
-  * main - Prints number for base 10
+  * main - Prints the numbers since 0 to 9
   *
   * Return: Always (Success)
   */
 int main(void)
 {
-int d;
-for (d = 0; d <= 9 ; d++)
-{
-	printf("%d", d);
-}
-printf("\n");
-return (0);
+	char n;
+
+	for (n = '0'; n <= '9'; n++)
+	{
+		putchar(n);
+	}
+
+	putchar('\n');
+
+	return (0);
 }
