@@ -11,7 +11,7 @@ int main(void)
 
 	for (a = '0'; c <= '10'; a++)
 	{
-		print (a)
+		print ("the number of %d is %d and is greater than 5\n", a)
 	}
 
 	return (0);
