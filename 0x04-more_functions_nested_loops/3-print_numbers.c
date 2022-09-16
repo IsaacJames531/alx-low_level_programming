@@ -1,16 +1,15 @@
-include "main"
-include <stdio.>
+#include "main.h"
+
 /**
- * print that prints 0-9 checks for a digit 0-9
- * @c: input
+ * print_numbers - a function that prints the numbers, from 0 to 9
+ *
+ * Return: 0-9 followed by newline
  */
- void print_numbers(void)
- {
-	int a;
-	for 
-	(a = 0; < 10; a++)
-	{
-		_putchar(a + '0');
-	}
-		_putchar('\n');
- }
+void print_numbers(void)
+{
+	int i;
+
+	for (i = 0; i <= 9; i++)
+		_putchar(i + '0');
+	_putchar('\n');
+}
