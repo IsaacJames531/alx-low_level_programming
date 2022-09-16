@@ -1,40 +1,62 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
- * print_to_98 - a function that prints all natural numbers from n to 98
- * user input's number prints to 98, regardless < 98 or > 98
- * @n: number input
- * Return: Always 0 (Success)
+ * print_times_table - prints the n times table starting with 0
+ * @n: number to the which times table is going to be printed
+ *
+ * Return: void, and the print of the n times table
  */
-void print_to_98(int n)
+
+void print_times_table(int n)
 {
-	if (n < 98)
+	int i;
+	int j;
+	int r;
+
+	if (n <= 15 && n >= 0)
 	{
-		while (n <= 98)
+		for (i = 0; i <= n; i++)
 		{
-			printf("%d", n);
-			if (n != 98)
+			for (j = 0; j <= n; j++)
 			{
-				printf(", ");
+				r = i * j;
+				print_any_int(r);
+
+				if (j < n)
+				{
+					_putchar(',');
+					_putchar(' ');
+					if ((i * (j + 1)) < 10)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
+					else if ((i * (j + 1)) < 100)
+					{
+						_putchar(' ');
+					}
+				}
 			}
-			n++;
+			_putchar('\n');
 		}
 	}
-	else if (n > 98)
-	{
-		while (n >= 98)
-		{
-			printf("%d", n);
-			if (n != 98)
-			{
-				printf(", ");
-			}
-			n--;
-		}
-	}
-	else
-	{
-		printf("98");
-	}
-	printf("\n");
+}
+
+/**
+ * print_any_int - uses _putchar to print every digit of any int
+ * @m: input integer to be printed with _putchar
+ *
+ * Return: void, printing every digit of m into stdout
+ */
+void print_any_int(int m)
+{
+	int last;
+
+	if (m / 10)
+		print_any_int(m / 10);
+
+	last = m % 10;
+	if (last < 0)
+		last = last * -1;
+	_putchar(last + '0');
 }
