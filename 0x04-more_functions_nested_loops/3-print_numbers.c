@@ -10,7 +10,7 @@ include <stdio.>
 	for 
 	(a=0; <10; a++)
 	{
-		putchar(a)
+		putchar(a);
 	}
-		putchar("\n")
+		putchar('\n');
  }
