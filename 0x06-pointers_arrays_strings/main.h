@@ -282,4 +282,5 @@ void swap_int(int* a, int* b);
 int _strlen(char* s);
 char* infinite_add(char* n1, char* n2, char* r, int size_r);
 void print_buffer(char* b, int size);
+void print_line(char* c, int s, int l)
 #endif
