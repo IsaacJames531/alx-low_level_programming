@@ -1,19 +1,25 @@
-/**
- * File: int _strlen_recursion(char *s);
- * Auth: sam
+/*
+ * File: 2-strlen_recursion.c
+ * Auth: smone
  */
 
 #include "main.h"
 
 /**
- * strlen_recursion(char *s) - Prints length of a strings
- * @s: The string to be printed.
+ * _strlen_recursion - Returns the length of a string.
+ * @s: The string to be measured.
+ *
+ * Return: The length of the string.
  */
-int _strlen_recursion(char *s);
+int _strlen_recursion(char *s)
 {
-if (*s)
-{
-_strlen_recursion(s + 1);
-_putchar(*s);
-}
+        int len = 0;
+
+        if (*s)
+        {
+                len++;
+                len += _strlen_recursion(s + 1);
+        }
+
+        return (len);
 }
