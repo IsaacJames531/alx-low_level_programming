@@ -7,11 +7,11 @@
  * _puts_recursion - Prints a string, followed by a new line.
  * @s: The string to be printed.
  */
-void _print_rev_recursion(char *s)
+void _puts_recursion(char *s)
 {
 if (*s)
 {
-string(*s);
+str(*s);
 _puts_recursion(s - 1);
 }
 
