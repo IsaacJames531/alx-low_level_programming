@@ -1,5 +1,3 @@
-cat > 1-print_rev_recursion.c
-
 /*
  * File: 1-print_rev_recursion.c
  * Auth: sam
