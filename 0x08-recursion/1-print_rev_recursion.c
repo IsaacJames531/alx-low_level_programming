@@ -1,20 +1,21 @@
+cat > 1-print_rev_recursion.c
+
 /*
- * File: 0-puts_recursion.c
+ * File: 1-print_rev_recursion.c
  * Auth: sam
  */
+
 #include "main.h"
+
 /**
- * _puts_recursion - Prints a string, followed by a new line.
+ * _print_rev_recursion - Prints a string in reverse.
  * @s: The string to be printed.
  */
-void_puts_recursion(char *s)
+void_print_rev_recursion(char *s)
 {
-if (*s)
-{
-str(*s);
-_puts_recursion(s - 1);
-}
-
-else
-_putchar('\n');
+        if (*s)
+        {
+                _print_rev_recursion(s + 1);
+                _putchar(*s);
+        }
 }
