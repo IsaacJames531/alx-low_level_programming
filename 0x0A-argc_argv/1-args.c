@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 /**
- * main - Prints the name of the program
+ * main - Write a program that prints the number of arguments passed into it
  * @argc: Number of command line arguments
  * @argv: Array name
  * Return: 0
@@ -12,3 +12,4 @@ int main(int args, char *argv[])
     (void)argv;
     return(0);
 }
+
