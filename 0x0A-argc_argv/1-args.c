@@ -13,5 +13,5 @@
     {
 	printf("%s\n", argv[i]);
     }
-	printf("\n")
+	printf("\n");
 }
