@@ -1,31 +1,14 @@
-#include "main.h"
-/**
-*_strspn - search the number of bytes in the initial
-* segment of s which consist only of bytes from accept
-*@s:segment targeted
-*@accept:reference bytes container
-*
-*Return:returns the number of bytes in the initial
-* segment of s which consist only of bytes from accept
-*/
-unsigned int _strspn(char *s, char *accept)
-{
-	unsigned int bytes = 0;
-	int i;
+#include <unistd.h>
 
-	while (*s)
-	{
-		for (i = 0; accept[i]; i++)
-		{
-			if (accept[i] == *s)
-			{
-				bytes++;
-				break;
-			}
-			else if ((accept[i + 1]) == '\0')
-				return (bytes);
-		}
-		s++;
-	}
-	return (bytes);
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is retrned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+    printf("this it the result");
+	return (write(1, &c, 1));
 }
